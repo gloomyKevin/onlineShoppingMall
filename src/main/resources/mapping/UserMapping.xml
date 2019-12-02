@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.market.dao.UserDao">
+
+    <select id="findAll" resultType="java.util.HashMap">
+        select * from user_
+    </select>
+
+    <delete id="deluser" parameterType="String">
+        	delete from user_ where id=#{id}
+    </delete>
+
+    <select id="findUser" parameterType="String" resultType="com.example.market.model.User">
+        select * from user_ where id=#{id}
+    </select>
+
+    <update id="updateUser" parameterType="com.example.market.model.User">
+
+    </update>
+
+</mapper>

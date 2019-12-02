@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"  lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            商品管理
+        </title>
+        <link rel="stylesheet" href="../css/x-admin.css" media="all">
+    </head>
+    <body>
+ <div class="x-body">
+          <form class="layui-form x-center" action="" style="width:500px">
+                <div class="layui-form-pane" style="margin-top: 15px;">
+                  <div class="layui-form-item">
+                    <div class="layui-input-inline" style="width:400px">
+                      <input type="text" name="username"  placeholder="搜索内容" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-input-inline" style="width:80px">
+                        <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+                    </div>
+                  </div>
+                </div> 
+            </form>
+                    <xblock>
+	            <button class="layui-btn layui-btn-danger"><i class="layui-icon">&#xe640;</i>批量删除</button>
+	            <button class="layui-btn"  ><i class="layui-icon">&#xe608;</i>  <a href="/view/download_bookadd" style="text-decoration:none" >添加</a></button>
+	            <button class="layui-btn layui-btn-danger"><i class="layui-icon"><img src="/images/daoru.png" width="15" height="15"></img></i>导出</button>
+	          <span class="x-right" style="line-height:25px">共有数据：88 条</span>
+	          </xblock>
+
+                    <table class="layui-table">
+                <thead>
+                    <tr>
+                        <th width="5%">
+                            <input type="checkbox" name="" value="">
+                        </th>
+                        <th width="9%">标题</th>
+                        <th>图片</th>
+                        <th width="9%">发表时间</th>
+                        <th>内容</th>
+                        <th width="8%">显示状态</th>
+                        <th width="8%">操作</th>
+                    </tr>
+                </thead>
+
+                <tbody id="x-img">
+                    <tr>
+                        <td>
+                            <input type="checkbox" value="1" name="">
+                        </td>
+                        <td width="7%">心理图片</td>
+                        <td align="center" width="7%">
+                            <img src="/images/tupian2.jpg" alt="" width="56" height="56">
+                        </td>
+                        <td >2017-07-15</td>
+                        <td >叙述内容</td>
+                        <td class="td-status">
+                            <span class="layui-btn layui-btn-normal layui-btn-mini">
+                                已显示
+                            </span>
+                        </td>
+                        <td class="td-manage">
+                            <a title="修改" href="/view/download_bookedit"
+                            class="ml-5" style="text-decoration:none">
+                                <i class="layui-icon">&#xe642;</i>
+                            </a>
+                            <a title="删除" href="#"   
+                            style="text-decoration:none">
+                                <i class="layui-icon">&#xe640;</i>
+                            </a>
+                        </td>
+                    </tr>
+                   </tbody>
+            </table>
+              </div>
+            </div> 
+        </div>
+    </body>
+</html>
